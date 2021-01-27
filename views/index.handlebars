@@ -1,14 +1,14 @@
-<h1>Welcome to Eat da Burger!</h1>
+<h1 class="text-center">Welcome to Eat da Burger!</h1>
 
-<div>
-  <ul id="uneaten-list">
+<div class="burgers">
+  <ul class="w-50" id="uneaten-list">
     {{#each burgers}}
       {{#unless devoured}}
         <li>{{ id }}. {{ burger_name }} <button data-id="{{ id }}">Devour!</button></li>
       {{/unless}}
     {{/each}}
   </ul>
-  <ul>
+  <ul class="w-50" id="eaten-list">
     {{#each burgers}}
       {{#if devoured}}
         <li>{{ id }}. {{ burger_name }}</li>
@@ -19,8 +19,10 @@
 
 
 
-<form id="burgerForm">
-  <label for="burgerInput">Burger Name:</label>
-  <input type="text" id="burgerInput" name="burgerName">
-  <button type="submit">Submit</button>
+<form class="text-center" id="burgerForm">
+  <div>
+    <label for="burgerInput">Burger Name:</label>
+    <input type="text" id="burgerInput" name="burgerName">
+    <button type="submit">Submit</button>
+  </div>
 </form>
